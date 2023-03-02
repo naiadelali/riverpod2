@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod2/data/user_data_provider.dart';
@@ -31,12 +30,12 @@ class HomePage extends ConsumerWidget {
                           child: Card(
                             color: Colors.lightBlue,
                             elevation: 4,
-                            margin: EdgeInsets.symmetric(vertical: 10),
+                            margin: const EdgeInsets.symmetric(vertical: 10),
                             child: ListTile(
-                              title: Text(userList[index].firstname,style: TextStyle(
+                              title: Text(userList[index].firstname,style:const TextStyle(
                                 color: Colors.white
                               ),),
-                              subtitle: Text(userList[index].lastname,style: TextStyle(
+                              subtitle: Text(userList[index].lastname,style:const TextStyle(
                                   color: Colors.white
                               )),
                               trailing: CircleAvatar(
@@ -51,7 +50,7 @@ class HomePage extends ConsumerWidget {
             );
           },
           error: (err,s)=>Text(err.toString()),
-          loading: ()=> Center(child: CircularProgressIndicator(),)
+          loading: ()=> const Center(child: CircularProgressIndicator(),)
       ),
     );
   }
